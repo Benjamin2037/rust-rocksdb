@@ -2158,6 +2158,16 @@ impl IngestExternalFileOptions {
             );
         }
     }
+
+    /// If set to true, a ingest
+    pub fn set_ingest_behind(&mut self, whether_write: bool) {
+        unsafe {
+            crocksdb_ffi::crocksdb_ingestexternalfileoptions_set_ingest_behind(
+                self.inner,
+                whether_write,
+            );
+        }
+    }
 }
 
 impl Drop for IngestExternalFileOptions {

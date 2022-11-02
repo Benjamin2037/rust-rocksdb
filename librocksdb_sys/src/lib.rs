@@ -1731,6 +1731,10 @@ extern "C" {
         opt: *mut IngestExternalFileOptions,
         write_global_seqno: bool,
     );
+    pub fn crocksdb_ingestexternalfileoptions_set_ingest_behind(
+        opt: *mut IngestExternalFileOptions,
+        ingest_behind: bool,
+    );
     pub fn crocksdb_ingestexternalfileoptions_destroy(opt: *mut IngestExternalFileOptions);
 
     // KeyManagedEncryptedEnv

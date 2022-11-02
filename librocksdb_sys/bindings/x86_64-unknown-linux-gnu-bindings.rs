@@ -3644,6 +3644,12 @@ extern "C" {
     );
 }
 extern "C" {
+    pub fn crocksdb_ingestexternalfileoptions_set_ingest_behind(
+        opt: *mut crocksdb_ingestexternalfileoptions_t,
+        ingest_behind: libc::c_uchar,
+    );
+}
+extern "C" {
     pub fn crocksdb_ingestexternalfileoptions_destroy(
         opt: *mut crocksdb_ingestexternalfileoptions_t,
     );

@@ -1876,6 +1876,10 @@ extern C_ROCKSDB_LIBRARY_API void
 crocksdb_ingestexternalfileoptions_set_write_global_seqno(
     crocksdb_ingestexternalfileoptions_t* opt,
     unsigned char write_global_seqno);
+extern C_ROCKSDB_LIBRARY_API void
+crocksdb_ingestexternalfileoptions_set_ingest_behind(
+    crocksdb_ingestexternalfileoptions_t* opt,
+    unsigned char ingest_behind);
 extern C_ROCKSDB_LIBRARY_API void crocksdb_ingestexternalfileoptions_destroy(
     crocksdb_ingestexternalfileoptions_t* opt);
 extern C_ROCKSDB_LIBRARY_API void crocksdb_ingest_external_file(

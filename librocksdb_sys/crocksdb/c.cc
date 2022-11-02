@@ -4675,6 +4675,12 @@ void crocksdb_ingestexternalfileoptions_set_write_global_seqno(
   opt->rep.write_global_seqno = write_global_seqno;
 }
 
+void crocksdb_ingestexternalfileoptions_set_ingest_behind(
+    crocksdb_ingestexternalfileoptions_t* opt,
+    unsigned char ingest_behind) {
+  opt->rep.ingest_behind = ingest_behind;
+}
+
 void crocksdb_ingestexternalfileoptions_destroy(
     crocksdb_ingestexternalfileoptions_t* opt) {
   delete opt;
